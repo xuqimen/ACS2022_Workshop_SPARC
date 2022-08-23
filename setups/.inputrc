@@ -1,0 +1,16 @@
+$include /etc/inputrc
+
+# Allow the command prompt to wrap to the next line
+set horizontal-scroll-mode Off
+
+## arrow up
+"\e[A":history-search-backward
+## arrow down
+"\e[B":history-search-forward
+
+# ignore case when using tab completion
+set completion-ignore-case on
+
+# turn off bell
+set bell-style none
+
