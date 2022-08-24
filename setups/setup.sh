@@ -24,3 +24,4 @@ cp -R -T data ~/data # copy things in data into ~/data (no target directory)
 #     cp -r data ~
 # fi
 
+echo "Done."
