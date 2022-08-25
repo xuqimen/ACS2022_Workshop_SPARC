@@ -12,7 +12,11 @@ where `username` is your GT username. You will be asked to type in the password.
 
 
 ### 1. Setup
-Download the materials to the cluster (`git clone https://github.com/xuqimen/ACS2022_Workshop_SPARC.git`). Go to `setups/` and run the following command
+Download the materials to the cluster:
+```bash
+git clone https://github.com/xuqimen/ACS2022_Workshop_SPARC.git
+```
+Go to `setups/` and run the following command
 ```bash
 source setup.sh
 ```
