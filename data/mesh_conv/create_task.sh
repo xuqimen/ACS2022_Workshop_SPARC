@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # use seq -f "%.2f" <start> <step> <end> to generate floating point sequence 
-for h in `seq -f "%.2f" 0.15 .05 0.80`
+for h in `seq -f "%.2f" 0.20 .05 0.80`
 do
     echo $h
     cp -r template/ mesh_$h

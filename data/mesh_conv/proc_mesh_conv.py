@@ -23,7 +23,7 @@ len_prfx = len(prefix)
 #         
 # folders = sorted(folders,key = lambda x: float(x[len_prfx:])) # sort by the trailing numbers
 
-folders = ["mesh_%.2f"%i for i in np.arange(0.15,0.81,0.10)]
+folders = ["mesh_%.2f"%i for i in np.arange(0.20,0.81,0.05)]
 # append ref folder to the end if necessary
 # folders.append("mesh_0.10")
 #print(folders)
@@ -76,8 +76,8 @@ for folder_name in folders:
         continue # skip current folder
     
     # grep pressure
-    #press_i = sparc.grep_pressure(out_fname)
-    press_i = -1
+    press_i = sparc.grep_pressure(out_fname)
+    #press_i = -1
     
     # grep stress
     stress_i = sparc.grep_stress(static_fname)

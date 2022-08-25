@@ -18,12 +18,12 @@ export MV2_ENABLE_AFFINITY=1
 export MV2_CPU_BINDING_POLICY=bunch
 
 # use seq -f "%.2f" <start> <step> <end> to generate floating point sequence 
-EXE="~/bin/sparc"
+EXE=~/bin/sparc
 
 for i in mesh_*/; 
 do
     cd $i;
-    echo "mesh = $i"
+    echo $i
     mpirun -np 12 ${EXE} -name sprc-calc > log
     cd ..;
 done
