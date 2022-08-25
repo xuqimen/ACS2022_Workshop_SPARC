@@ -35,7 +35,8 @@ You should see something like this:
 ```bash
 
 Currently Loaded Modules:
-  1) xalt/2.8.4   2) intel/19.0.5   3) mvapich2/2.3.2   4) gcc-compatibility/8.3.0   5) pace/2020.01
+  1) xalt/2.8.4     3) mvapich2/2.3.2   5) git/2.25.0                7) anaconda3/2021.05
+  2) intel/19.0.5   4) pace/2020.01     6) gcc-compatibility/8.3.0
 ```
 
 Now you are ready to install SPARC! Download the source code from GitHub by
