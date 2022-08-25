@@ -18,7 +18,7 @@ export MV2_ENABLE_AFFINITY=1
 export MV2_CPU_BINDING_POLICY=bunch
 
 # use seq -f "%.2f" <start> <step> <end> to generate floating point sequence 
-EXE="~/SPARC/lib/sparc"
+EXE="~/bin/sparc"
 
 for i in mesh_*/; 
 do

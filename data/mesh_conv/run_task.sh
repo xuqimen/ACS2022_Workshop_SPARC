@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # use seq -f "%.2f" <start> <step> <end> to generate floating point sequence 
-EXE="~/SPARC/lib/sparc"
+EXE="~/bin/sparc"
 
 #for i in np_*/; 
 for i in mesh_*/; 

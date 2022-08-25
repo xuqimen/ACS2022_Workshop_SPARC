@@ -47,7 +47,13 @@ Once the code is downloaded, go to the `SPARC/src` directory. Compile the code b
 ```bash
 make clean; make -j 2
 ```
-The `-j 2` option is just to speedup the compilation. If you have more processors available, you can increase this number (e.g. -j 8) to make it faster. On PACE-ICE, the installation will take around 1 minute with `-j 2`. Once the code is compiled successfully, a binary named `sparc` will be created in the `SPARC/lib` directory.
+The `-j 2` option is just to speedup the compilation. If you have more processors available, you can increase this number (e.g. -j 8) to make it faster. On PACE-ICE, the installation will take around `70 s` with `-j 2`. Once the code is compiled successfully, a binary named `sparc` will be created in the `SPARC/lib` directory.
+
+To make sure everyone has the binary `sparc`  in the same place, let's create a copy of this binary in the `~/bin/` directory:
+```bash
+mkdir -p ~/bin
+cp ../lib/sparc ~/bin/
+```
 
 
 #### 2.2 Verify your installation
