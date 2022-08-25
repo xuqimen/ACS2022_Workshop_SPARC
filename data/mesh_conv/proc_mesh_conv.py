@@ -76,8 +76,8 @@ for folder_name in folders:
         continue # skip current folder
     
     # grep pressure
-    press_i = sparc.grep_pressure(out_fname)
-    #press_i = -1
+    #press_i = sparc.grep_pressure(out_fname)
+    press_i = -1
     
     # grep stress
     stress_i = sparc.grep_stress(static_fname)
