@@ -1,0 +1,30 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=12
+#PBS -l pmem=7GB
+#PBS -l walltime=1:00:00
+##PBS -A GT-phanish6
+##PBS -q inferno
+##PBS -q hive-interact
+#PBS -q pace-ice
+#PBS -N mesh_conv
+#PBS -o stdout
+#PBS -e stderr
+cd $PBS_O_WORKDIR
+
+#module load anaconda3/4.2.0;source activate atm
+ulimit -s unlimited
+
+export MV2_ENABLE_AFFINITY=1
+export MV2_CPU_BINDING_POLICY=bunch
+
+# use seq -f "%.2f" <start> <step> <end> to generate floating point sequence 
+EXE="~/SPARC/lib/sparc"
+
+for i in mesh_*/; 
+do
+    cd $i;
+    echo "mesh = $i"
+    mpirun -np 12 ${EXE} -name sprc-calc > log
+    cd ..;
+done
+

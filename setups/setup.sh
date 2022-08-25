@@ -14,7 +14,7 @@ source ~/.bashrc
 
 # copy the data folder into your home directory
 mkdir -p ~/data
-cp -R -T data ~/data # copy things in data into ~/data (no target directory)
+cp -R -T ../data ~/data # copy things in data into ~/data (no target directory)
 
 # if [ -d ~/data ]; then
 #     echo "~/data/ already exists"

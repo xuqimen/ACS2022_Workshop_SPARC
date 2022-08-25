@@ -11,6 +11,8 @@ export PATH=$PATH:$HOME/bin
 
 #module load git
 source ~/.pacemodules
+module load git
+module load anaconda3
 
 # to resolve occasional window resize problem
 #export PROMPT_COMMAND="resize &>/dev/null"

@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -l nodes=__nnode__:ppn=24
+#PBS -l pmem=7GB
+#PBS -l walltime=1:00:00
+#PBS -A GT-phanish6
+#PBS -q inferno
+##PBS -q hive-interact
+##PBS -q pace-ice
+#PBS -N Al_scaling
+#PBS -o stdout
+#PBS -e stderr
+cd $PBS_O_WORKDIR
+
+#module load anaconda3/4.2.0;source activate atm
+ulimit -s unlimited
+
+export MV2_ENABLE_AFFINITY=1
+export MV2_CPU_BINDING_POLICY=bunch
+
+nproc=24
+
+#for i in `seq -f "%.0f" 50 10 100`
+for np in ${nproc}
+do
+    echo ${np}
+    mpirun -np ${np} ~/bin/sparc -name al1372 > al1372-${np}.log
+    mv al1372.out al1372-${np}.out
+    #mv al1372.static al1372-${np}.static
+    mv al1372.aimd al1372-${np}.aimd
+done
+
+
+
