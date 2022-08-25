@@ -45,7 +45,7 @@ git clone https://github.com/SPARC-X/SPARC.git
 ```
 Once the code is downloaded, go to the `SPARC/src` directory. Compile the code by
 ```bash
-$ make clean; make -j 2
+make clean; make -j 2
 ```
 The `-j 2` option is just to speedup the compilation. If you have more processors available, you can increase this number (e.g. -j 8) to make it faster. On PACE-ICE, the installation will take around 1 minute with `-j 2`. Once the code is compiled successfully, a binary named `sparc` will be created in the `SPARC/lib` directory.
 
